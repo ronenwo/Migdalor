@@ -32,6 +32,7 @@
             android:layout_height="271px"
             android:background="@drawable/invite"
             android:layout_gravity="center"
+            android:onClick="inviteMessage"
             />
         <Button
             android:id="@+id/sosBtnId"

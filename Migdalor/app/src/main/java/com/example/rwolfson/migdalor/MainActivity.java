@@ -1,5 +1,6 @@
 package com.example.rwolfson.migdalor;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -25,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+
+    /** Called when the user clicks the invite button */
+    public void inviteMessage(View view) {
+        Intent intent = new Intent(this, VolantearActivity.class);
+        startActivity(intent);
     }
 
     @Override
