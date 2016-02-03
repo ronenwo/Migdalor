@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.rwolfson.migdalor.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginTop="160px"
+            android:layout_marginBottom="160px"
+            android:id="@+id/imageView1"
+            android:layout_width="490px"
+            android:layout_height="592px"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            ></ImageView>
+        <Button
+            android:id="@+id/inviteBtnId"
+            android:layout_width="747px"
+            android:layout_height="271px"
+            android:background="@drawable/invite"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:id="@+id/sosBtnId"
+            android:layout_width="487px"
+            android:layout_height="175px"
+            android:layout_gravity="center"
+            android:background="@drawable/sos"
+            android:layout_marginTop="92px"
+            android:layout_marginBottom="92px"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
