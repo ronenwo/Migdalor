@@ -19,13 +19,18 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="400px">
+            android:layout_height="700px">
 
             <ImageView
-                android:layout_width="281px"
-                android:layout_height="284px"
+                android:layout_width="352dp"
+                android:layout_height="356dp"
                 android:src="@drawable/vol_pic"
-                android:id="@+id/imageView1" />
+                android:id="@+id/imageView1"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_toStartOf="@+id/textView2"
+                android:layout_above="@+id/imageButtonCancel"
+                android:layout_marginEnd="71dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,6 +59,30 @@
                 android:layout_marginRight="30px"
                 android:text="יוליה ליטבינוב"
                 android:id="@+id/textView2" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButtonCancel"
+                android:src="@drawable/cancel"
+                android:layout_below="@+id/textView2"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="80px"
+                android:layout_marginRight="30px"
+                android:layout_marginBottom="40px"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/textView2" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButtonChange"
+                android:src="@drawable/change"
+                android:layout_below="@+id/imageView1"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignBottom="@+id/imageButtonCancel"
+                 />
         </RelativeLayout>
         <ImageView
             android:layout_width="match_parent"

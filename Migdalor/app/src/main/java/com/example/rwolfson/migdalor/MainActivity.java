@@ -1,6 +1,7 @@
 package com.example.rwolfson.migdalor;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,7 +11,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 public class MainActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +36,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /** Called when the user clicks the invite button */
+    /**
+     * Called when the user clicks the invite button
+     */
     public void inviteMessage(View view) {
+
+        try {
+            Intent callIntent = new Intent(Intent.ACTION_CALL);
+            callIntent.setData(Uri.parse("tel:"));
+            startActivityForResult(callIntent, 1);
+        }
+        catch (SecurityException se){
+
+        }
+
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         Intent intent = new Intent(this, VolantearActivity.class);
         startActivity(intent);
+//        if (resultCode==RESULT_OK){
+//
+//            Intent intent = new Intent(this, VolantearActivity.class);
+//            startActivity(intent);
+//
+//        }
+
     }
 
     @Override
@@ -48,5 +80,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
     }
 }
