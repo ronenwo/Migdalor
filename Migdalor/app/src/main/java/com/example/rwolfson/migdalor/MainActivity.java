@@ -1,5 +1,6 @@
 package com.example.rwolfson.migdalor;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -25,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+//        final android.support.v7.app.ActionBar ab = getSupportActionBar();
+//        ab.setHomeButtonEnabled(true);
+//        ab.setDisplayShowHomeEnabled(true);
+//        ab.setIcon(R.drawable.logo); //also displays wide logo
+//        ab.setDisplayShowTitleEnabled(true); //optional
+//        getSupportActionBar().setLogo(R.drawable.logo);
 
     }
 
